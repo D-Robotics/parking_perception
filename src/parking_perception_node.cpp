@@ -115,7 +115,7 @@ int ParkingPerceptionNode::Start() {
                 sharedmem_img_topic_name_.c_str());
     sharedmem_img_subscription_ =
         this->create_subscription<hbm_img_msgs::msg::HbmMsg1080P>(
-            sharedmem_img_topic_name_, 10,
+            sharedmem_img_topic_name_, rclcpp::SensorDataQoS(),
             std::bind(&ParkingPerceptionNode::SharedMemImgProcess, this,
                       std::placeholders::_1));
 #else
