@@ -68,6 +68,7 @@ include_directories(
 
 link_directories(
   ${SYS_ROOT}/usr/lib/hbbpu/
+  ${SYS_ROOT}/usr/hobot/lib/
 )
 
 add_executable(${PROJECT_NAME}
