@@ -2,7 +2,7 @@ English| [简体中文](./README_cn.md)
 
 # Function Introduction
 
-The `parking_perception` package is an outdoor parking area detection algorithm example developed based on the `hobot_dnn` package. It utilizes a multi-task reasoning model introduced by Horizon, using the parking area detection model on the Sunrise X3 platform and indoor data for model reasoning with BPU, thus obtaining AI reasoning results.
+The `parking_perception` package is an outdoor parking area detection algorithm example developed based on the `hobot_dnn` package. It utilizes a multi-task reasoning model introduced by TROS, using the parking area detection model on the Sunrise X3 platform and indoor data for model reasoning with BPU, thus obtaining AI reasoning results.
 
 This package supports directly subscribing to topics of type `sensors/msg/Image` and supports inferring from local images. The AI information will be published through the topic while the results are visualized on a web page. It also supports saving the rendered images in the "result" directory during program execution.
 
@@ -151,7 +151,7 @@ colcon build --packages-select parking_perception \
 
 ## Running
 
-After successful compilation, copy the generated install directory to the Horizon X3 development board (ignore copying steps if compiling on X3), and run the following commands:
+After successful compilation, copy the generated install directory to the RDK X3 development board (ignore copying steps if compiling on X3), and run the following commands:
 
 ### **Ubuntu X3**
 

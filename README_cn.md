@@ -2,7 +2,7 @@
 
 # 功能介绍
 
-parking_perception package 是基于 hobot_dnn package开发的室外停车区域检测算法示例，基于地平线推出的多任务推理模型，在地平线的旭日X3派上使用停车区域检测模型和室内数据利用BPU进行模型推理，从而得到AI推理结果。
+parking_perception package 是基于 hobot_dnn package开发的室外停车区域检测算法示例，基于多任务推理模型，在RDK X3上使用停车区域检测模型和室内数据利用BPU进行模型推理，从而得到AI推理结果。
 本package支持直接订阅sensors/msg/Image类型的话题，并且支持读取本地图片的形式进行推理，将AI信息通过话题发布的同时会将结果在Web页面渲染可视化，同时支持渲染图片保存在程序运行的result目录。
 
 多任务模型同时支持语义分割和目标检测。
@@ -64,7 +64,7 @@ ros package：
 - ai_msgs
 - OpenCV
 
-dnn_node是在地平线旭日X3开发板上利用BPU处理器进行模型推理的package，定义在hobot_dnn中。
+dnn_node是在RDK X3开发板上利用BPU处理器进行模型推理的package，定义在hobot_dnn中。
 
 ai_msgs为自定义的消息格式，用于算法模型推理后，发布推理结果，ai_msgs package定义在hobot_msgs中。
 
@@ -157,7 +157,7 @@ colcon build --packages-select parking_perception \
 
 ## 运行
 
-编译成功后，将生成的install路径拷贝到地平线旭日X3开发板上（如果是在X3上编译，忽略拷贝步骤），并执行如下命令运行：
+编译成功后，将生成的install路径拷贝到RDK X3开发板上（如果是在X3上编译，忽略拷贝步骤），并执行如下命令运行：
 
 ### **Ubuntu X3**
 
