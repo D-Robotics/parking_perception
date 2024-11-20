@@ -26,6 +26,7 @@
 #include "rclcpp/rclcpp.hpp"
 #include <sys/stat.h>
 #include <cv_bridge/cv_bridge.h>
+#include "opencv2/imgproc/types_c.h"
 
 builtin_interfaces::msg::Time ConvertToRosTime(
     const struct timespec& time_spec) {
